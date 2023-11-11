@@ -1,0 +1,194 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="939" Width="1164">
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.2,0" StartPoint="1.3,2">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="Bisque" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,64,10,10" Grid.RowSpan="2">
+            <ScrollViewer CanContentScroll="True" Height="641">
+                <ScrollViewer.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.121"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.748"/>
+                    </TransformGroup>
+                </ScrollViewer.RenderTransform>
+                <StackPanel Width="360">
+                    <TextBlock Text="Предсуществующие факторы риска" FontSize="19" FontWeight="Bold" Margin="0,0,0,20"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Предшествующее ВТЭО"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Предшествующее ВТЭО, спровоцированное большим хирургическим вмешательством"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Подтвержденное наличие тромбофилии высокого риска:"/></TextBlock>
+                    </CheckBox>
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock Text="Подтвержденное наличие тромбофилии высокого риска" FontSize="19" FontWeight="Bold" Margin="0,0,0,20"/>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">антифосфолипидный синдром (АФС)</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">гомозиготная мутация гена фактора V (мутация Лейден F5 G1691A) или rs 6025 (далее – мутация F5)</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center">гомозиготная мутация гена фактора II (протромбина) F2 G20210А или rs 179996 (далее – мутация F2)</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center">сочетание гетерозиготных мутаций факторов V (Лейден) и II (протромбина)</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center">дефицит АТ</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center">дефицит протеина С</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center">дефицит протеина S</TextBlock>
+                        </StackPanel>
+                    </Expander>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Сопутствующие заболевания:"/></TextBlock>
+
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">онкологическое заболевание</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">пароксизмальная ночная гемоглобинурия</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">сердечная недостаточность</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">активная системная красная волчанка</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">воспалительная полиартропатия</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">воспалительное заболевание кишечника</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">нефротический синдром</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">сахарный диабет I типа с нефропатией</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">серповидноклеточная анемия</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">наркомания с внутривенным введением наркотиков в настоящее время</TextBlock>
+                        </StackPanel>
+                    </Expander>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Семейный анамнез неспровоцированной или связанное с воздействием эстрогена ВТЭО у родственника первой степени родства"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Известная тромбофилия низкого риска (без ВТЭО)"/></TextBlock>
+                    </CheckBox>
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">гетерозиготная мутация гена фактора V (мутация Лейден F5 G1691A)</TextBlock>
+                            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">гетерозиготная мутация гена фактора II (протромбина) F2 G20210А</TextBlock>
+                        </StackPanel>
+                    </Expander>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Возраст (&gt;35 лет)"/></TextBlock>
+                    </CheckBox>
+                    <TextBlock Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Ожирение: (Блок с расчетом ИМТ)"/><LineBreak/><Run Text="ИМТ ≥30 = 1"/><LineBreak/><Run Text="ИМТ ≥40 = 2"/></TextBlock>
+                    </TextBlock>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="≥ 3 родов"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Курение"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Варикозное расширение вен нижних конечностей тяжелой степени"/></TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Width="360" Height="300" Margin="5,49,23,113">
+            <ScrollViewer CanContentScroll="True" Height="300">
+                <StackPanel>
+                    <TextBlock Text="Акушерские факторы риска" FontSize="19" FontWeight="Bold" Margin="0,0,0,20"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Преэклампсия во время текущей беременности"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="ВРТ/ЭКО (только антенатально)"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Многоплодная беременность"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Кесарево сечение в родах"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Плановое кесарево сечение"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Вагинальное оперативное родоразрешение, в т.ч. с применением ротационных акушерских щипцов"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Продолжительные роды (&gt;24 часов)"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Послеродовое кровотечение (&gt;1 литра или переливание крови)"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Преждевременные роды &lt;37+0 недели при данной беременности"/></TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18"><Run Text="Мертворождение в настоящую беременность"/></TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Width="360" Height="300" Margin="25,6,3,155" Grid.Row="1">
+            <ScrollViewer CanContentScroll="True" Height="300">
+                <StackPanel>
+                    <TextBlock Text="Преходящие факторы риска" FontSize="19" FontWeight="Bold" Margin="0,0,0,20"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18">
+                    Любая хирургическая процедура во время беременности или послеродового периода,
+                    (за исключением наложения швов на промежность сразу после родов), например,
+                    аппендэктомия, послеродовая стерилизация
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18">
+                    Неукротимая рвота
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18">
+                    Синдром гиперстимуляции яичников (только первый триместр)
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18">
+                    Системная инфекция в настоящее время
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18">
+                    Ограничение подвижности, обезвоживание
+                        </TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+        <Label Grid.Column="1" Content="Результат" HorizontalAlignment="Center" Margin="0,325,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Height="38" FontWeight="Bold" />
+        <TextBox Width="25" Height="100" Grid.Column="1" Margin="156,316,207,45" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.49"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+    </Grid>
+
+
+</Window>
